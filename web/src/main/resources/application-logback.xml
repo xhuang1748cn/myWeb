@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/2002/xmlspec/dtd/2.10/xmlspec.dtd">
+
+<configuration>
+	<!-- 尽量别用绝对路径，如果带参数不同容器路径解释可能不同 -->  
+	<property name="LOG_HOME" value="../logs	"/>
+	<property name="LOG_LEVEL" value="DEBUG"/>
+	<property name="CHARSET" value="UTF-8"/>
+	<property name="LAYOUT_PATTERN" value="%d{YYY-MM-dd HH:mm:ss.SSS} [%thread] [%-5level]  %msg    [%class{50}.%method:%L] %n%xThrowable"/>
+	<property name="SUFFIX" value="%d{yyyy-MM-dd}.log"/>
+	<property name="MAX_HISTORY" value="30"/>
+	<property name="PRUDENT" value="true"/>
+	
+	<appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+		<Encoding>${CHARSET}</Encoding>
+		<encoder>
+			<pattern>${LAYOUT_PATTERN}</pattern>
+		</encoder>
+		<!-- deny all events with a level below LOG_LEVEL -->	
+		<filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+			<level>${LOG_LEVEL}</level>  
+		</filter>
+		<!--  deny all events excepte The LOG_LEVEL-->
+		<!--<filter class="ch.qos.logback.classic.filter.LevelFilter">
+		  <level>${LOG_LEVEL}</level>
+		  <onMatch>ACCEPT</onMatch>
+		  <onMismatch>DENY</onMismatch>
+		</filter> -->
+	</appender>
+	
+	<!-- 配置DAO层的日志 -->
+	<appender name="log4Dao" class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<Encoding>${CHARSET}</Encoding>
+		<Prudent>${PRUDENT}</Prudent>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			 <!-- rollover daily -->
+			 <FileNamePattern>${LOG_HOME}/dao.${SUFFIX}</FileNamePattern> 
+			 <!-- keep ${MAX_HISTORY} days' worth of history --> 
+			 <MaxHistory>${MAX_HISTORY}</MaxHistory>  
+		</rollingPolicy>
+		<layout class="ch.qos.logback.classic.PatternLayout">  
+			<pattern>${LAYOUT_PATTERN}</pattern>  
+	   </layout>  
+		<!-- deny all events with a level below LOG_LEVEL -->	
+		<filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+			<level>${LOG_LEVEL}</level>  
+		</filter> 
+	</appender>
+	
+	<!-- 配置Service层的日志文件 -->
+	<appender name="log4Service" class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<Encoding>${CHARSET}</Encoding>
+		<Prudent>${PRUDENT}</Prudent>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			 <!-- rollover daily -->
+			 <FileNamePattern>${LOG_HOME}/service.${SUFFIX}</FileNamePattern> 
+			 <!-- keep ${MAX_HISTORY} days' worth of history --> 
+			 <MaxHistory>${MAX_HISTORY}</MaxHistory>  
+		</rollingPolicy>
+		<layout class="ch.qos.logback.classic.PatternLayout">  
+			<pattern>${LAYOUT_PATTERN}</pattern>  
+	   </layout>  
+		<!-- deny all events with a level below LOG_LEVEL -->	
+		<filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+			<level>${LOG_LEVEL}</level>  
+		</filter> 
+	</appender>
+	<!-- 配置 Controller层的日志文件 -->
+	<appender name="log4Controller" class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<Encoding>${CHARSET}</Encoding>
+		<Prudent>${PRUDENT}</Prudent>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			 <!-- rollover daily -->
+			 <FileNamePattern>${LOG_HOME}/controller.${SUFFIX}</FileNamePattern> 
+			  <!-- keep MAX_HISTORY days' worth of history --> 
+			 <MaxHistory>${MAX_HISTORY}</MaxHistory>  
+		</rollingPolicy>
+		<layout class="ch.qos.logback.classic.PatternLayout">  
+			<pattern>${LAYOUT_PATTERN}</pattern>  
+	   </layout>  
+		<!-- deny all events with a level below LOG_LEVEL -->	
+		<filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+			<level>${LOG_LEVEL}</level>  
+		</filter> 
+	</appender>
+	<!-- 配置 各个组建日志文件 -->
+	<appender name="log4Modual" class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<Encoding>${CHARSET}</Encoding>
+		<Prudent>${PRUDENT}</Prudent>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			 <!-- rollover daily -->
+			 <FileNamePattern>${LOG_HOME}/modual.${SUFFIX}</FileNamePattern> 
+			 <!-- keep MAX_HISTORY days' worth of history --> 
+			 <MaxHistory>${MAX_HISTORY}</MaxHistory>  
+		</rollingPolicy>
+		<layout class="ch.qos.logback.classic.PatternLayout">  
+			<pattern>${LAYOUT_PATTERN}</pattern>  
+	   </layout>   
+		<!-- deny all events with a level below LOG_LEVEL -->	
+		<filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+			<level>${LOG_LEVEL}</level>  
+		</filter>
+	</appender>
+	
+	 <!-- 下面配置一些业务相关的日志 --> 
+	<logger name="cn.srn.services"  additivity="false">
+		<level>${LOG_LEVEL}</level>  
+		<appender-ref ref="log4Service" />  
+		<appender-ref ref="STDOUT" />  
+	</logger>  
+  
+	<logger name="cn.srn.repositories"  additivity="false">
+		<level>${LOG_LEVEL}</level>  
+		<appender-ref ref="log4Dao" />  
+		<appender-ref ref="STDOUT" />
+	</logger>
+	<logger name="cn.srn.controllers"  additivity="false">
+		<level>${LOG_LEVEL}</level>  
+		<appender-ref ref="log4Controller" />  
+		<appender-ref ref="STDOUT" />
+	</logger>
+	 <!-- 下面配置一些第三方包的日志过滤级别，用于避免刷屏 --> 
+	<logger name="org.springframework"  additivity="false">  
+		<level>${LOG_LEVEL}</level>  
+		<appender-ref ref="log4Modual" />  
+		<appender-ref ref="STDOUT" />  
+	</logger>
+</configuration>
