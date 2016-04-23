@@ -61,8 +61,7 @@
 		</mvc:interceptor>
 		<mvc:interceptor>
 			<mvc:mapping path="/**"/>
-			<mvc:exclude-mapping path="/admin/*"/>
-			<mvc:exclude-mapping path="/bg/**"/>
+			<mvc:exclude-mapping path="/"/>
 			<mvc:exclude-mapping path="/**/*.css"/>
 			<mvc:exclude-mapping path="/**/*.jpg"/>
 			<mvc:exclude-mapping path="/**/*.png"/>
@@ -70,7 +69,7 @@
 			<bean class="cn.srn.interceptors.LoginInterceptor"/>
 		</mvc:interceptor>
 		<mvc:interceptor>
-			<mvc:mapping path="/bg/**"/>
+			<mvc:mapping path="/admin/**"/>
 			<bean class="cn.srn.interceptors.BgLoginInterceptor"/>
 		</mvc:interceptor>
 	</mvc:interceptors>

@@ -9,7 +9,7 @@ public interface BaseDao {
 
     long addEntity(Entity entity);
     long addEntities(Entity ... entity);
-    long findOne(long id);
+    Entity findOne(long id);
     long save(Entity entity);
     long deleteOne(long id);
 }

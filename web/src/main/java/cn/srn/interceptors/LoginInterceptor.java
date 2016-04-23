@@ -20,7 +20,7 @@ public class LoginInterceptor extends AbstractLoginInterceptor {
 			if (isAjaxRequest(request)) {
 				ajaxRequestReturn(response, "noLogin");
 			} else {
-				request.getRequestDispatcher("/admin/login").forward(request, response);
+				request.getRequestDispatcher("/").forward(request, response);
 			}
 			return false;
 		}
