@@ -101,20 +101,43 @@
 			<level>${LOG_LEVEL}</level>  
 		</filter>
 	</appender>
+	<!-- 其他文件 -->
+	<appender name="log4Other" class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<Encoding>${CHARSET}</Encoding>
+		<Prudent>${PRUDENT}</Prudent>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<!-- rollover daily -->
+			<FileNamePattern>${LOG_HOME}/Other.${SUFFIX}</FileNamePattern>
+			<!-- keep MAX_HISTORY days' worth of history -->
+			<MaxHistory>${MAX_HISTORY}</MaxHistory>
+		</rollingPolicy>
+		<layout class="ch.qos.logback.classic.PatternLayout">
+			<pattern>${LAYOUT_PATTERN}</pattern>
+		</layout>
+		<!-- deny all events with a level below LOG_LEVEL -->
+		<filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+			<level>${LOG_LEVEL}</level>
+		</filter>
+	</appender>
 	
-	 <!-- 下面配置一些业务相关的日志 --> 
-	<logger name="cn.srn.services"  additivity="false">
+	 <!-- 下面配置一些业务相关的日志 -->
+	<logger name="com.zyzs.zjsy"  additivity="false">
+		<level>${LOG_LEVEL}</level>
+		<appender-ref ref="log4Other" />
+		<appender-ref ref="STDOUT" />
+	</logger>
+	<logger name="com.zyzs.zjsy.services"  additivity="false">
 		<level>${LOG_LEVEL}</level>  
 		<appender-ref ref="log4Service" />  
 		<appender-ref ref="STDOUT" />  
 	</logger>  
   
-	<logger name="cn.srn.repositories"  additivity="false">
+	<logger name="com.zyzs.zjsy.repositories"  additivity="false">
 		<level>${LOG_LEVEL}</level>  
 		<appender-ref ref="log4Dao" />  
 		<appender-ref ref="STDOUT" />
 	</logger>
-	<logger name="cn.srn.controllers"  additivity="false">
+	<logger name="com.zyzs.zjsy.controllers"  additivity="false">
 		<level>${LOG_LEVEL}</level>  
 		<appender-ref ref="log4Controller" />  
 		<appender-ref ref="STDOUT" />
