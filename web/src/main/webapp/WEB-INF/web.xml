@@ -3,7 +3,7 @@
          xmlns="http://java.sun.com/xml/ns/javaee"
          xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
          id="WebApp_ID" version="3.0">
-  <display-name>zyycWeb</display-name>
+  <display-name>myWeb</display-name>
 
   <!-- 初始化Spring 开始 -->
   <!-- 指定配置文件 -->
@@ -60,4 +60,9 @@
     <url-pattern>/*</url-pattern>
   </filter-mapping>
   <!--  解决上传后中文文件名乱码问题  end -->
+
+  <context-param>
+    <param-name>webAppRootKey</param-name>
+    <param-value>myWeb</param-value>
+  </context-param>
 </web-app>

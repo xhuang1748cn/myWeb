@@ -121,23 +121,23 @@
 	</appender>
 	
 	 <!-- 下面配置一些业务相关的日志 -->
-	<logger name="com.zyzs.zjsy"  additivity="false">
+	<logger name="cn.srn"  additivity="false">
 		<level>${LOG_LEVEL}</level>
 		<appender-ref ref="log4Other" />
 		<appender-ref ref="STDOUT" />
 	</logger>
-	<logger name="com.zyzs.zjsy.services"  additivity="false">
+	<logger name="cn.srn.services"  additivity="false">
 		<level>${LOG_LEVEL}</level>  
 		<appender-ref ref="log4Service" />  
 		<appender-ref ref="STDOUT" />  
 	</logger>  
   
-	<logger name="com.zyzs.zjsy.repositories"  additivity="false">
+	<logger name="cn.srn.repositories"  additivity="false">
 		<level>${LOG_LEVEL}</level>  
 		<appender-ref ref="log4Dao" />  
 		<appender-ref ref="STDOUT" />
 	</logger>
-	<logger name="com.zyzs.zjsy.controllers"  additivity="false">
+	<logger name="cn.srn.controllers"  additivity="false">
 		<level>${LOG_LEVEL}</level>  
 		<appender-ref ref="log4Controller" />  
 		<appender-ref ref="STDOUT" />
