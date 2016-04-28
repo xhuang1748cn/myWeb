@@ -135,3 +135,56 @@ function showModelWithOutClean(modelId, heightId, percent) {
 		"top": "50%"
 	});
 }
+
+function postForm(url,dataType,formId,timeout,showId,callBack,isAsync) {
+	if(!url){
+		return;
+	}
+	if(isAsync){
+		isAsync = true;
+	}else if(isAsync !=false){
+		isAsync = true;
+	}
+	$.ajax({
+		type: method || "post",
+		url: url,
+		contentType: "multipart/form-data",
+		data:$(formId).serialize(),
+		cache: false,
+		async:isAsync,
+		dataType: dataType || "text",
+		timeout: timeout || 30000,
+		success:function(data){
+			if(data==='noLogin'){
+				//未登陆
+				window.location.href="index";
+				return;
+			}
+			if(dataType == "JSON" || dataType == "json"){
+				if(callBack){
+					callBack(data);
+				}
+			}else{
+				if(showId){
+					$(showId).html("");
+					$(showId).html(data);
+				}
+				if(callBack){
+					callBack(data);
+				}
+			}
+		},
+		error:function(response, textStatus, errorThrown){
+			if(response.responseText==='noLogin'){
+				//未登陆
+				window.location.href="index";
+				return;
+			}else if(response.status==408 || response.status== 504){
+				jqAlert("业务处理超时");
+			}else if(response.status==500){
+				jqAlert("业务处理异常");
+			}
+		}
+	});
+}
+
