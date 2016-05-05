@@ -11,11 +11,10 @@
 </head>
 <body>
 <h2>Hello World!</h2>
-<div>
-    <p>${user.userName}</p>
-    <p><fmt:formatDate value="${user.regtime}" pattern="yyyy-MM-dd HH:mm:ss"/></p>
-</div>
+<a href="/showuser">用户信息</a>
+<a href="/adaptive">自适应页面</a>
 <a href="/print">打印</a>
 <a href="/user/1/info">用户信息</a>
+<a href="/helloamaze">Amaze学习</a>
 </body>
 </html>
