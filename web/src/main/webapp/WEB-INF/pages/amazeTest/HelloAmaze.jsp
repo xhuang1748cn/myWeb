@@ -176,10 +176,10 @@
       <%--<div class="am-u-md-4 am-u-md-pull-8 am-u-lg-reset-order">4 sidebar</div>--%>
     <%--</div>--%>
 
-    <div class="am-g am-g-collapse doc-am-g">
-      <div class="am-u-sm-6">.am-u-sm-6</div>
-      <div class="am-u-sm-6">.am-u-sm-6</div>
-    </div>
+    <%--<div class="am-g am-g-collapse doc-am-g">--%>
+      <%--<div class="am-u-sm-6">.am-u-sm-6</div>--%>
+      <%--<div class="am-u-sm-6">.am-u-sm-6</div>--%>
+    <%--</div>--%>
 <!--在这里编写你的代码-->
 </div>
 <!--[if (gte IE 9)|!(IE)]><!-->
