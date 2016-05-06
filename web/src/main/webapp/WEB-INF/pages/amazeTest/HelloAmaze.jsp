@@ -51,10 +51,10 @@
     <%--I'm in the .am-container.--%>
   <%--</div>--%>
 
-  <%--<div class="am-g doc-am-g">--%>
-    <%--<div class="am-u-sm-6 am-u-md-4 am-u-lg-3">sm-6 md-4 lg-3</div>--%>
-    <%--<div class="am-u-sm-6 am-u-md-8 am-u-lg-9">sm-6 md-8 lg-9</div>--%>
-  <%--</div>--%>
+  <div class="am-g doc-am-g  am-margin am-padding">
+    <div class="am-u-sm-6 am-u-md-4 am-u-lg-3">sm-6 md-4 lg-3</div>
+    <div class="am-u-sm-6 am-u-md-8 am-u-lg-9">sm-6 md-8 lg-9</div>
+  </div>
 
   <%--<div class="am-g doc-am-g">--%>
     <%--<div class="am-u-sm-3">3</div>--%>
@@ -180,6 +180,28 @@
       <%--<div class="am-u-sm-6">.am-u-sm-6</div>--%>
       <%--<div class="am-u-sm-6">.am-u-sm-6</div>--%>
     <%--</div>--%>
+
+    <%--<div class="am-g doc-am-g">--%>
+      <%--<div class="am-u-md-6 am-u-lg-2 am-hide-sm-down">--%>
+        <%--<span class="am-show-md-down">am-u-md-6 导航</span>--%>
+        <%--<span class="am-hide-md-down">am-u-lg-2 导航</span>--%>
+      <%--</div>--%>
+      <%--<div class="am-u-md-6 am-u-lg-10 ">--%>
+        <%--<span class="am-show-md-down">am-u-md-6 内容</span>--%>
+        <%--<span class="am-hide-md-down">am-u-lg-10 内容</span>--%>
+      <%--</div>--%>
+    <%--</div>--%>
+
+    <ul class="am-avg-sm-2 am-avg-md-3 am-avg-lg-4 am-thumbnails">
+      <li><img class="am-thumbnail" src="http://s.amazeui.org/media/i/demos/bing-1.jpg" /></li>
+      <li><img class="am-thumbnail" src="http://s.amazeui.org/media/i/demos/bing-2.jpg" /></li>
+      <li><img class="am-thumbnail" src="http://s.amazeui.org/media/i/demos/bing-3.jpg" /></li>
+      <li><img class="am-thumbnail" src="http://s.amazeui.org/media/i/demos/bing-4.jpg" /></li>
+      <li><img class="am-thumbnail" src="http://s.amazeui.org/media/i/demos/bing-1.jpg" /></li>
+      <li><img class="am-thumbnail" src="http://s.amazeui.org/media/i/demos/bing-2.jpg" /></li>
+      <li><img class="am-thumbnail" src="http://s.amazeui.org/media/i/demos/bing-3.jpg" /></li>
+      <li><img class="am-thumbnail" src="http://s.amazeui.org/media/i/demos/bing-4.jpg" /></li>
+    </ul>
 <!--在这里编写你的代码-->
 </div>
 <!--[if (gte IE 9)|!(IE)]><!-->
