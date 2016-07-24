@@ -14,7 +14,7 @@ public class UserDaoTest extends BaseDaoTest {
 
     @Test
     public void findOneTest() {
-        User user = (User) userDao.findOne(1);
+        User user = (User) userDao.findOne(1L);
         System.out.println(user.toString());
     }
 }

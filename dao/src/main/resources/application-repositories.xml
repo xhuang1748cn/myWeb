@@ -50,15 +50,15 @@
 	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
 		<property name="dataSource" ref="dataSource" />
 		<!-- 自动扫描mapping.xml文件 -->
-		<property name="mapperLocations"
-			value="classpath:mapping/**/*.xml"></property>
+		<property name="mapperLocations" value="classpath:mapping/**/*.xml"/>
 		<property name="typeAliasesPackage" value="cn.srn.repositories.entity" />
+		<property name="configLocation" value="classpath:mybatis-config.xml" />
 	</bean>
 	
 	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
         <property name="basePackage" value="cn.srn.repositories.daos" />
         <property name="annotationClass" value="org.springframework.stereotype.Repository"/>
-        <property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"></property>
+        <property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"/>
     </bean>
 	
 </beans>

@@ -1,4 +1,4 @@
-/**
+﻿/**
  * @Description:动态事件函数
  * @param method:请求方法 (必须)
  * @param url:请求链接 (必须)
@@ -85,7 +85,7 @@ function showJsonData(data, succFunc, failFunc, excepFunc,
 	if (data) {
 		if (data.code===0) {
 			if (succFunc) {
-				succFunc();
+				succFunc(data);
 			} else {
 				jqAlert(data.desp, succTitle, succComfirm);
 			}
@@ -93,14 +93,14 @@ function showJsonData(data, succFunc, failFunc, excepFunc,
 			window.location.href="index";
 		} else {
 			if (failFunc) {
-				failFunc();
+				failFunc(data);
 			} else {
 				jqAlert(data.desp, failTitle, failComfirm);
 			}
 		}
 	} else {
 		if (excepFunc) {
-			excepFunc();
+			excepFunc(data);
 		} else {
 			jqAlert("出现异常", excepTitle, excepComfirm);
 		}

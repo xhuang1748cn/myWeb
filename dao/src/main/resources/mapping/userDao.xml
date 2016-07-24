@@ -4,4 +4,10 @@
     <select id="findOne" parameterType="long" resultType="User">
         <![CDATA[SELECT * FROM `t_user` WHERE `uid`=#{id}]]>
     </select>
+
+    <select id="findAll" parameterType="long" resultType="User">
+        <![CDATA[SELECT * FROM `t_user`]]>
+    </select>
+
+
 </mapper>
