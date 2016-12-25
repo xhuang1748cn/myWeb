@@ -45,4 +45,10 @@ public class IndexController {
     public String testSocket() {
         return "testws";
     }
+
+    @RequestMapping(value = "/jspTagTest")
+    public String jspTagTest(Model model) {
+        model.addAttribute("fileType", "txt");
+        return "jspTagTest";
+    }
 }

@@ -16,6 +16,7 @@
         <module>service</module>
         <module>dao</module>
         <module>util</module>
+        <module>tag</module>
     </modules>
 
     <properties>
@@ -37,6 +38,7 @@
         <mybatis-pagehelper.version>4.1.6</mybatis-pagehelper.version>
         <quartz.version>2.2.1</quartz.version>
         <jackson.version>2.7.3</jackson.version>
+        <j2eeapi.version>7.0</j2eeapi.version>
     </properties>
 
     <dependencyManagement>
@@ -181,6 +183,11 @@
                 <groupId>com.fasterxml.jackson.core</groupId>
                 <artifactId>jackson-databind</artifactId>
                 <version>${jackson.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>javax</groupId>
+                <artifactId>javaee-api</artifactId>
+                <version>${j2eeapi.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>

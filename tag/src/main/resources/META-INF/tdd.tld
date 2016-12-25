@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<taglib xmlns="http://java.sun.com/xml/ns/javaee"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-jsptaglibrary_2_1.xsd"
+        version="2.1">
+
+    <description>TagDemo</description>
+    <display-name>TagDemo</display-name>
+    <tlib-version>1.0</tlib-version>
+    <short-name>ttd</short-name>
+    <uri>http://cn.srn/jsp/TagDemo</uri>
+
+    <tag>
+        <description>TagTest</description>
+        <name>jspTagTest</name>
+        <tag-class>cn.srn.jsptag.JspTagTest</tag-class>
+        <body-content>JSP</body-content>
+
+        <attribute>
+            <description>
+                tag Property txt
+            </description>
+            <name>tagProperty</name>
+            <required>true</required>
+            <rtexprvalue>true</rtexprvalue>
+            <type>java.lang.String</type>
+        </attribute>
+    </tag>
+
+</taglib>
