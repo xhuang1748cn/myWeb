@@ -40,4 +40,9 @@ public class IndexController {
     public String adaptive() {
         return "adaptive";
     }
+
+    @RequestMapping(value = "/testSocket")
+    public String testSocket() {
+        return "testws";
+    }
 }

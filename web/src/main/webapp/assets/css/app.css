@@ -1,17 +1,11 @@
 /* Write your styles */
+.am-panel-group .am-panel-hd .logo:after {
+    content: "\f105";
+    float:right;
+    margin-right: 1.6rem;
+    transform: rotate(90deg);
+}
 
-.doc-am-g + .doc-am-g, .doc-example .am-container + * {
-    margin-top: 10px;
-}
-.doc-content .doc-am-g {
-    margin-left: initial;
-    margin-right: initial;
-}
-.doc-am-g > [class*="col-"], .doc-am-g > [class*="am-u-"] {
-    border: 1px solid #dd514c;
-    padding-bottom: 5px;
-    padding-top: 5px;
-}
-.doc-am-g > [class*="col-"]:nth-child(2n), .doc-am-g > [class*="am-u-"]:nth-child(2n) {
-    background: #eee none repeat scroll 0 0;
+.am-panel-group .am-panel-hd .am-collapsed:after {
+    transform: rotate(0deg);
 }

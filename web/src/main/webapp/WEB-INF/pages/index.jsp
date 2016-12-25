@@ -16,5 +16,7 @@
 <a href="/print">打印</a>
 <a href="/user/1/info">用户信息</a>
 <a href="/helloamaze">Amaze学习</a>
+<a href="/echarts">Echarts</a>
+<a href="/autoTask">测试动态任务</a>
 </body>
 </html>

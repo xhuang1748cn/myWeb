@@ -13,6 +13,11 @@ public class ResponseInfo implements Serializable{
     public ResponseInfo() {
     }
 
+    public ResponseInfo(int code, String message) {
+        this.code = code;
+        this.message = message;
+    }
+
     public int getCode() {
         return code;
     }

@@ -47,162 +47,49 @@
   Hello Amaze UI.
 </p>
 <div class="am-container">
-  <%--<div class="am-container">--%>
-    <%--I'm in the .am-container.--%>
-  <%--</div>--%>
 
-  <div class="am-g doc-am-g  am-margin am-padding">
-    <div class="am-u-sm-6 am-u-md-4 am-u-lg-3">sm-6 md-4 lg-3</div>
-    <div class="am-u-sm-6 am-u-md-8 am-u-lg-9">sm-6 md-8 lg-9</div>
+  <div class="am-panel am-panel-primary">
+    <div class="am-panel-hd">面板标题</div>
+    <div class="am-panel-bd">
+      <div class="am-panel-group" id="accordion">
+        <div class="am-panel am-panel-default">
+          <div class="am-panel-hd">
+            <a class="am-panel-title">111111</a>
+            <span class="logo" data-am-collapse="{parent: '#accordion', target: '#do-not-say-1'}"></span>
+          </div>
+          <div id="do-not-say-1" class="am-panel-collapse am-collapse am-in">
+            <div class="am-panel-bd">
+              ...
+            </div>
+          </div>
+        </div>
+        <div class="am-panel am-panel-default">
+          <div class="am-panel-hd">
+            <a class="am-panel-title">222222</a>
+            <span class="logo am-collapsed" data-am-collapse="{parent: '#accordion', target: '#do-not-say-2'}"></span>
+          </div>
+          <div id="do-not-say-2" class="am-panel-collapse am-collapse">
+            <div class="am-panel-bd">
+              2222222222222222222222222222
+            </div>
+          </div>
+        </div>
+        <div class="am-panel am-panel-default">
+          <div class="am-panel-hd">
+            <a class="am-panel-title">333333</a>
+            <span class="logo am-collapsed" data-am-collapse="{parent: '#accordion', target: '#do-not-say-3'}"></span>
+          </div>
+          <div id="do-not-say-3" class="am-panel-collapse am-collapse">
+            <div class="am-panel-bd">
+              33333333333333333333333333333
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 
-  <%--<div class="am-g doc-am-g">--%>
-    <%--<div class="am-u-sm-3">3</div>--%>
-    <%--<div class="am-u-sm-3">3</div>--%>
-    <%--<div class="am-u-sm-3">3</div>--%>
-  <%--</div>--%>
 
-  <%--<!-- 添加 .am-u-end 后 -->--%>
-  <%--<div class="am-g doc-am-g">--%>
-    <%--<div class="am-u-sm-3">3</div>--%>
-    <%--<div class="am-u-sm-3">3</div>--%>
-    <%--<div class="am-u-sm-3 am-u-end">3</div>--%>
-  <%--</div>--%>
-
-  <%--<div class="am-g doc-am-g">--%>
-    <%--<div class="am-u-sm-2 am-u-lg-4">--%>
-      <%--<span class="am-show-md-down">sm-2</span>--%>
-      <%--<span class="am-show-lg-only">lg-4</span>--%>
-    <%--</div>--%>
-    <%--<div class="am-u-sm-4 am-u-lg-4">sm4 lg4</div>--%>
-    <%--<div class="am-u-sm-6 am-u-lg-4">--%>
-      <%--<span class="am-show-md-down">sm-6</span>--%>
-      <%--<span class="am-show-lg-only">lg-4</span>--%>
-    <%--</div>--%>
-  <%--</div>--%>
-
-  <%--<div class="am-g doc-am-g">--%>
-    <%--<div class="am-u-lg-3">--%>
-      <%--<span class="am-show-sm-down">sm-full</span>--%>
-      <%--<span class="am-show-md-down">md-full</span>--%>
-      <%--<span class="am-show-lg-only">lg-3</span>--%>
-    <%--</div>--%>
-    <%--<div class="am-u-lg-6">--%>
-      <%--<span class="am-show-sm-down">sm-full</span>--%>
-      <%--<span class="am-show-md-down">md-full</span>--%>
-      <%--<span class="am-show-lg-only">lg-6</span>--%>
-    <%--</div>--%>
-    <%--<div class="am-u-lg-3">--%>
-      <%--<span class="am-show-sm-down">sm-full</span>--%>
-      <%--<span class="am-show-md-down">md-full</span>--%>
-      <%--<span class="am-show-lg-only">lg-3</span>--%>
-    <%--</div>--%>
-  <%--</div>--%>
-
-  <%--<div class="am-g doc-am-g">--%>
-    <%--<div class="am-u-sm-6 am-u-lg-2">--%>
-      <%--<span class="am-show-md-down">6</span>--%>
-      <%--<span class="am-hide-md-down">2</span>--%>
-    <%--</div>--%>
-    <%--<div class="am-u-sm-6 am-u-lg-8">--%>
-      <%--<span class="am-show-md-down">6</span>--%>
-      <%--<span class="am-hide-md-down">8</span>--%>
-    <%--</div>--%>
-    <%--<div class="am-u-sm-12 am-u-lg-2">--%>
-      <%--<span class="am-show-md-down">full</span>--%>
-      <%--<span class="am-hide-md-down">2</span>--%>
-    <%--</div>--%>
-  <%--</div>--%>
-
-  <%--<div class="am-g doc-am-g">--%>
-    <%--<div class="am-u-sm-3">3</div>--%>
-    <%--<div class="am-u-sm-9">9</div>--%>
-  <%--</div>--%>
-
-  <%--<div class="am-g doc-am-g">--%>
-    <%--<div class="am-u-lg-4">--%>
-      <%--<span class="am-show-md-down">full</span>--%>
-      <%--<span class="am-hide-md-down">4</span>--%>
-    <%--</div>--%>
-    <%--<div class="am-u-lg-8">--%>
-      <%--<span class="am-show-md-down">full</span>--%>
-      <%--<span class="am-hide-md-down">8</span>--%>
-    <%--</div>--%>
-  <%--</div>--%>
-
-  <%--<div class="am-g doc-am-g">--%>
-    <%--<div class="am-u-sm-6 am-u-lg-5">--%>
-      <%--<span class="am-show-md-down">6</span>--%>
-      <%--<span class="am-hide-md-down">5</span>--%>
-    <%--</div>--%>
-    <%--<div class="am-u-sm-6 am-u-lg-7">--%>
-      <%--<span class="am-show-md-down">6</span>--%>
-      <%--<span class="am-hide-md-down">7</span>--%>
-    <%--</div>--%>
-  <%--</div>--%>
-
-  <%--<div class="am-g doc-am-g">--%>
-    <%--<div class="am-u-lg-6">--%>
-      <%--<span class="am-show-md-down">full</span>--%>
-      <%--<span class="am-hide-md-down">6</span>--%>
-    <%--</div>--%>
-    <%--<div class="am-u-lg-6">--%>
-      <%--<span class="am-show-md-down">full</span>--%>
-      <%--<span class="am-hide-md-down">6</span>--%>
-    <%--</div>--%>
-  <%--</div>--%>
-
-    <%--<div class="am-g doc-am-g">--%>
-      <%--<div class="am-u-sm-3 am-u-sm-centered">3 centered</div>--%>
-    <%--</div>--%>
-
-    <%--<!-- .am-u-lg-centered 大于 1024 时居中 -->--%>
-    <%--<div class="am-g doc-am-g">--%>
-      <%--<div class="am-u-sm-6 am-u-lg-centered">6 centered</div>--%>
-    <%--</div>--%>
-
-    <%--<!-- 大于 1024 时不居中 -->--%>
-    <%--<div class="am-g doc-am-g">--%>
-      <%--<div class="am-u-sm-9 am-u-sm-centered am-u-lg-uncentered">9 md-down-centered </div>--%>
-    <%--</div>--%>
-
-    <%--<!-- 始终居中 -->--%>
-    <%--<div class="am-g doc-am-g">--%>
-      <%--<div class="am-u-sm-11 am-u-sm-centered">11 centered</div>--%>
-    <%--</div>--%>
-
-    <%--<div class="am-g doc-am-g">--%>
-      <%--<div class="am-u-md-8 am-u-md-push-4 am-u-lg-reset-order">8 main</div>--%>
-      <%--<div class="am-u-md-4 am-u-md-pull-8 am-u-lg-reset-order">4 sidebar</div>--%>
-    <%--</div>--%>
-
-    <%--<div class="am-g am-g-collapse doc-am-g">--%>
-      <%--<div class="am-u-sm-6">.am-u-sm-6</div>--%>
-      <%--<div class="am-u-sm-6">.am-u-sm-6</div>--%>
-    <%--</div>--%>
-
-    <%--<div class="am-g doc-am-g">--%>
-      <%--<div class="am-u-md-6 am-u-lg-2 am-hide-sm-down">--%>
-        <%--<span class="am-show-md-down">am-u-md-6 导航</span>--%>
-        <%--<span class="am-hide-md-down">am-u-lg-2 导航</span>--%>
-      <%--</div>--%>
-      <%--<div class="am-u-md-6 am-u-lg-10 ">--%>
-        <%--<span class="am-show-md-down">am-u-md-6 内容</span>--%>
-        <%--<span class="am-hide-md-down">am-u-lg-10 内容</span>--%>
-      <%--</div>--%>
-    <%--</div>--%>
-
-    <ul class="am-avg-sm-2 am-avg-md-3 am-avg-lg-4 am-thumbnails">
-      <li><img class="am-thumbnail" src="http://s.amazeui.org/media/i/demos/bing-1.jpg" /></li>
-      <li><img class="am-thumbnail" src="http://s.amazeui.org/media/i/demos/bing-2.jpg" /></li>
-      <li><img class="am-thumbnail" src="http://s.amazeui.org/media/i/demos/bing-3.jpg" /></li>
-      <li><img class="am-thumbnail" src="http://s.amazeui.org/media/i/demos/bing-4.jpg" /></li>
-      <li><img class="am-thumbnail" src="http://s.amazeui.org/media/i/demos/bing-1.jpg" /></li>
-      <li><img class="am-thumbnail" src="http://s.amazeui.org/media/i/demos/bing-2.jpg" /></li>
-      <li><img class="am-thumbnail" src="http://s.amazeui.org/media/i/demos/bing-3.jpg" /></li>
-      <li><img class="am-thumbnail" src="http://s.amazeui.org/media/i/demos/bing-4.jpg" /></li>
-    </ul>
-<!--在这里编写你的代码-->
 </div>
 <!--[if (gte IE 9)|!(IE)]><!-->
 <script src="assets/js/jquery.min.js"></script>
